@@ -3,3 +3,18 @@
         color-scheme: dark;
     }
 } */
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-links a {
+    flex-grow: 1;
+    text-align:center;
+}
+
+.nav-links a:last-child {
+    margin-right: 0;
+}
