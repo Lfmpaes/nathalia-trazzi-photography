@@ -6,6 +6,8 @@ export default function Home() {
         <main className="main">
             <h1>Nathalia Trazzi</h1>
             <Link href="/about">About</Link>
+            <Link href="/faq">FAQ</Link>
+            <Link href="/portfolio">Portfolio</Link>
             <Photo />
         </main>
     );
