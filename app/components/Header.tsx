@@ -1,19 +1,50 @@
 'use client';
-import { Navbar, Text } from '@nextui-org/react';
+import { Link, Navbar, Text } from '@nextui-org/react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+    const navItems = [
+        { name: 'Home', path: '/' },
+        { name: 'About', path: '/about' },
+        { name: 'Stills', path: '/stills' },
+        { name: 'Studio', path: '/studio' },
+    ];
+
+    const currentRoute = usePathname();
+
     return (
         <header className="header">
             <Navbar>
-                <Navbar.Content enableCursorHighlight variant={"underline"}>
-                    <Navbar.Link href="/">Home</Navbar.Link>
-                    <Navbar.Link href="/about">About</Navbar.Link>
-                    <Navbar.Link href="/stills">Stills</Navbar.Link>
-                    <Navbar.Link href="/studio">Studio</Navbar.Link>
+                <Navbar.Toggle showIn="xs" />
+                <Navbar.Content
+                    hideIn="xs"
+                    enableCursorHighlight
+                    variant={'underline'}>
+                    {navItems.map((item) => (
+                        <Navbar.Link
+                            isActive={item.path == currentRoute}
+                            key={item.name}
+                            href={item.path}>
+                            {item.name}
+                        </Navbar.Link>
+                    ))}
                 </Navbar.Content>
+                <Navbar.Collapse>
+                    {navItems.map((item) => (
+                        <Navbar.CollapseItem key={item.name}>
+                            <Text b color="inherit">
+                                <Link color={'text'} href={item.path}>
+                                    {item.name}
+                                </Link>
+                            </Text>
+                        </Navbar.CollapseItem>
+                    ))}
+                </Navbar.Collapse>
                 <Navbar.Brand>
                     <Text b color="inherit">
-                        Nathalia Trazzi
+                        <Link color={'text'} href="/">
+                            Nathalia Trazzi
+                        </Link>
                     </Text>
                 </Navbar.Brand>
             </Navbar>
