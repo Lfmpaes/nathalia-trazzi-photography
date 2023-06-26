@@ -1,6 +1,10 @@
-import { Inter } from 'next/font/google';
+'use client';
+// import { Inter } from 'next/font/google';
+import './globals.css';
+import Header from './components/Header';
+import { NextUIProvider } from '@nextui-org/react';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'Nathalia Trazzi Photography',
@@ -14,7 +18,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-br">
-            <body className={inter.className}>{children}</body>
+            <NextUIProvider>
+                <body>
+                    {/* <body className={inter.className}> */}
+                    <Header />
+                    {children}
+                </body>
+            </NextUIProvider>
         </html>
     );
 }

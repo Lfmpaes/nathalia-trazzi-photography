@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-export default function Faq() {
+export default function Stills() {
     return (
         <main className="main">
-            <h1>Faq Page</h1>
+            <h1>Stills Page</h1>
             <Link href="/">Home</Link>
         </main>
     );
