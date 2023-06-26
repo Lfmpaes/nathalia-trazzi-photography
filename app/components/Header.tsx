@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <header className="header">
             <Navbar>
-                <Navbar.Content  enableCursorHighlight>
+                <Navbar.Content enableCursorHighlight variant={"underline"}>
                     <Navbar.Link href="/">Home</Navbar.Link>
                     <Navbar.Link href="/about">About</Navbar.Link>
                     <Navbar.Link href="/stills">Stills</Navbar.Link>

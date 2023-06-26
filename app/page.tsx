@@ -34,7 +34,6 @@ export default function Home() {
                     </Col>
                 </Row>
 
-                {/* <button className="btn btn-primary">Click me</button> */}
             </Container>
         </main>
     );

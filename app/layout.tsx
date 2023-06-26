@@ -1,7 +1,5 @@
-// import { Inter } from 'next/font/google';
-import './globals.css';
-import Providers from "./providers";
-import React from "react";
+import Providers from './providers';
+import React from 'react';
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -17,11 +15,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="pt-br">
-                <body>
-                    <Providers>
-                        {children}
-                    </Providers>
-                </body>
+            <body>
+                <Providers>{children}</Providers>
+            </body>
         </html>
     );
 }

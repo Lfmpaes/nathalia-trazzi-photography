@@ -1,19 +1,18 @@
 'use client';
 
-import {NextUIProvider} from "@nextui-org/react";
-import Header from "./components/Header";
-import React from "react";
+import { CssBaseline, NextUIProvider } from '@nextui-org/react';
+import Header from './components/Header';
+import React from 'react';
+import './globals.css';
 
-export default function Providers({children}: {
-    children: React.ReactNode;
-}) {
+export default function Providers({ children }: { children: React.ReactNode }) {
     return (
         <NextUIProvider>
-            <Header/>
-            <main>
-                {children}
-            </main>
+            <div className="app">
+                {CssBaseline.flush()}
+                <Header />
+                <main>{children}</main>
+            </div>
         </NextUIProvider>
-    )
-
+    );
 }
