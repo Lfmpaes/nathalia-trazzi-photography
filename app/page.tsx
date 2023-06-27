@@ -1,39 +1,16 @@
 'use client';
-import { Button, Card, Container, Col, Row, Text } from '@nextui-org/react';
+import { Button, Container, Col, Row, Text, Spacer } from '@nextui-org/react';
+import HomeCarousel from './components/Carousel';
 
 export default function Home() {
     return (
         <main className="main">
+            <Spacer y={1} />
             <Container>
-                <Text h1>Nathalia Trazzi</Text>
-
-                <Row gap={1}>
-                    <Col>
-                        {/*<Card css={{ mw: '400px' }}>*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Link href="/about">About</Link>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
-                        <Button size="xl">About</Button>
-                    </Col>
-                    <Col>
-                        {/*<Card css={{ mw: '400px' }}>*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Link href="/stills">Stills</Link>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
-                        <Button size="xl">Stills</Button>
-                    </Col>
-                    <Col>
-                        {/*<Card css={{ mw: '400px' }}>*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Link href="/studio">Studio</Link>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
-                        <Button size="xl">Studio</Button>
-                    </Col>
-                </Row>
-
+                <Text b size="xl">
+                    Nathalia Trazzi
+                </Text>
+                <HomeCarousel />
             </Container>
         </main>
     );
