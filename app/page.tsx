@@ -5,11 +5,8 @@ import HomeCarousel from './components/Carousel';
 export default function Home() {
     return (
         <main className="main">
-            <Spacer y={1} />
+            {/* <Spacer y={1} /> */}
             <Container>
-                <Text b size="xl">
-                    Nathalia Trazzi
-                </Text>
                 <HomeCarousel />
             </Container>
         </main>

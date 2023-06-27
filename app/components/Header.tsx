@@ -1,5 +1,5 @@
 'use client';
-import { Link, Navbar, Text } from '@nextui-org/react';
+import { Image, Link, Navbar, Text } from '@nextui-org/react';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
@@ -41,10 +41,16 @@ export default function Header() {
                     ))}
                 </Navbar.Collapse>
                 <Navbar.Brand>
+                    <Image
+                        src="/logo.png"
+                        alt="Nathalia Trazzi"
+                        width={150}
+                        // height={202}
+                    />
                     <Text b color="inherit">
-                        <Link color={'text'} href="/">
+                        {/* <Link color={'text'} href="/">
                             Nathalia Trazzi
-                        </Link>
+                        </Link> */}
                     </Text>
                 </Navbar.Brand>
             </Navbar>
